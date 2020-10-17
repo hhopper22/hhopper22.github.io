@@ -13,11 +13,11 @@ p {
   }
 }
 
-h1 {
+h1,
+h2 {
   font-weight: 400;
   @include serif-font;
 }
-h2,
 h3,
 h4,
 h5,
@@ -27,13 +27,19 @@ h6 {
 }
 
 a {
-  color: $gray-900;
+  color: $primary;
+  text-decoration: underline;
   @include transition-all;
   &:focus,
   &:hover {
-    color: $primary;
+    color: $secondary;
   }
 }
+
+a[target="_blank"]:after {
+    font-family: 'FontAwesome';
+    content: " \f08e";
+  }
 
 blockquote {
   font-style: italic;
@@ -60,14 +66,16 @@ blockquote {
 
 ::-moz-selection {
   color: $white;
-  background: $primary;
+  background: $brickred;
   text-shadow: none;
+  text-decoration-color: $white;
 }
 
 ::selection {
   color: $white;
-  background: $primary;
+  background: $brickred;
   text-shadow: none;
+  text-decoration-color: $white;
 }
 
 img::selection {

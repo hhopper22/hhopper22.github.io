@@ -7,6 +7,7 @@
   .navbar-brand {
     font-weight: 800;
     color: $white;
+    text-decoration: none;
   }
   .navbar-toggler {
     font-size: 12px;
@@ -23,6 +24,7 @@
         font-weight: 800;
         letter-spacing: 1px;
         text-transform: uppercase;
+        text-decoration: none;
       }
     }
   }
