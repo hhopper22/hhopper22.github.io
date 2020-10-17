@@ -1,0 +1,18 @@
+// Styling for the footer
+footer {
+  background-color: $mustard;
+  margin-top: 60px;
+  padding: 50px 0 65px;
+  .list-inline {
+    margin: 0;
+    padding: 0;
+    li a {
+      color: $mossgreen;
+    }
+  }
+  .copyright {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

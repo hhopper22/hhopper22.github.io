@@ -1,0 +1,25 @@
+title:              Haley Hopper
+email:              haleyhopper22@gmail.com
+description:        Web Design and Development Portfolio
+author:             Haley Hopper
+baseurl:            "/startbootstrap-clean-blog-jekyll"
+url:                "https://startbootstrap.github.io"
+
+# Social Profiles
+twitter_username:
+github_username:    hhopper22
+facebook_username:
+instagram_username:  haleyelise25
+linkedin_username:  haleyhopper
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
