@@ -8,6 +8,13 @@
     font-weight: 800;
     color: $white;
     text-decoration: none;
+    &:focus {
+      color: $mossgreen;
+      background-color: $white;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .navbar-toggler {
     font-size: 12px;
@@ -25,6 +32,14 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         text-decoration: none;
+        color: $white;
+        &:focus {
+          color: $mossgreen;
+          background-color: $white;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -34,9 +49,9 @@
     .navbar-brand {
       padding: 10px 20px;
       color: $white;
-      &:focus,
       &:hover {
         color: fade-out($white, .2);
+        text-decoration: none;
       }
     }
     .navbar-nav {
@@ -44,9 +59,9 @@
         > a {
           padding: 10px 20px;
           color: $white;
-          &:focus,
           &:hover {
             color: fade-out($white, .2);
+            text-decoration: none;
           }
         }
       }

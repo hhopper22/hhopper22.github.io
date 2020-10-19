@@ -1,21 +1,41 @@
 // Styling for the post page
-.post-preview {
-  > a {
-    color: $gray-900;
-    &:focus,
-    &:hover {
-      text-decoration: none;
-      color: $primary;
+a.post-preview {
+  border: none;
+  color: $gray-900;
+  text-decoration: none;
+  border-radius: 0;
+  &:focus,
+  &:hover {
+    background-color: $floralwhite;
+    transition: 0.8s;
+    .card-img-top {
+      opacity: 0.5;
+      transition: 0.8s;
     }
-    > .post-title {
-      font-size: 30px;
-      margin-top: 30px;
-      margin-bottom: 10px;
+    .card-img-overlay {
+    opacity: 1;
+      transition: 0.8s;
+  }
+  }
+  > .card-img-top {
+    border-radius: 0;
+  }
+  > .card-img-overlay {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    span i.fa-inverse {
+      color: $floralwhite;
     }
-    > .post-subtitle {
-      font-weight: 300;
-      margin: 0 0 10px;
-    }
+  }
+  > .card-title {
+    font-size: .85rem;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+  }
+  > .card-text {
+    font-weight: 300;
+    margin: 0 0 .65rem;
   }
   > .post-meta {
     font-size: 18px;
@@ -44,6 +64,6 @@
   }
 }
 .blog-posts {
-    background-color: $floralwhite;
-    padding: 1em;
-  }
+  background-color: $floralwhite;
+  padding: 1em;
+}

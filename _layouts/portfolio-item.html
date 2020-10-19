@@ -20,7 +20,12 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-2 col-md-3">
+        <p><i class="far fa-calendar-alt"></i>Completed in <strong>{{ page.project-date }}</strong></p>
+        <p><i class="fas fa-user-cog"></i>I did <strong>{{ page.work-type }}</strong> work in this project</p>
+        <p><i class="fas fa-laptop-code"></i>This work was for a <strong>{{ page.site-type }}</strong></p>
+      </div>
+      <div class="col-lg-8 col-md-9 mx-auto">
 
         {{ content }}
 
@@ -30,11 +35,11 @@ layout: default
 
           {% if page.previous.url %}
           <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
+              Project</span></a>
           {% endif %}
           {% if page.next.url %}
           <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-              Post</span> &rarr;</a>
+              Project</span> &rarr;</a>
           {% endif %}
 
         </div>

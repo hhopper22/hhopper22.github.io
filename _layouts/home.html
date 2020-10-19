@@ -23,54 +23,59 @@ layout: default
     </div>
   </header>
 
-<div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
-        
-      </div>
-  </div>
-  
-  <div class="row">
-     <div class="col-md-12">
-       <h2 class="section-heading mb-5">Recent Projects</h2>
-      </div>
-        <!-- Home Post List -->
-        {% for post in site.portfolio limit : 9 %}
-     <div class="col-md-4 col-sm-6">
-
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <img src="{{ post.front-image }}" alt="{{ post.front-image-alt }}" />
-            <h2 class="post-title">{{ post.title }}</h2>
-            <h3 class="post-subtitle">{{ post.project-date }}</h3>
-          </a>
-        </article>
 
       </div>
+    </div>
 
-        {% endfor %}
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-heading mb-5">Recent Projects</h2>
+      </div>
+    </div>
 
+    <div class="row row-cols-1 row-cols-md-2">
+      <!-- Home Recent Portfolio List -->
+      {% for post in site.portfolio limit : 9 %}
+      <div class="col mb-5">
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="card h-100 post-preview">
+          <img src="{{ post.front-image }}" class="card-img-top" alt="{{ post.front-image-alt }}" />
+          <div class="card-img-overlay">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-long-arrow-alt-right fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+          <div class="card-body">      
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.subtitle }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
     
-        <!-- Pager -->
+    <div class="row">
+      <!-- Pager -->
       <div class="col-md-12">
         <div class="clearfix">
           <a class="btn btn-primary" href="{{"/posts" | relative_url }}">View All Portfolio Items &rarr;</a>
         </div>
       </div>
-
-
     </div>
   </div>
-  
+
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h2 class="section-heading mb-5">Recent Posts</h2>
       </div>
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 2 %}
+      <!-- Home Post List -->
+      {% for post in site.posts limit : 2 %}
 
       <div class="col-md-6 mx-auto blog-posts">
         <article class="post-preview">
@@ -92,9 +97,9 @@ layout: default
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
           </p>
         </article>
-        </div>
+      </div>
 
-        {% endfor %}
+      {% endfor %}
 
       <div class="col-md-12">
         <!-- Pager -->
@@ -102,6 +107,6 @@ layout: default
           <a class="btn btn-primary" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
         </div>
       </div>
-      
+
     </div>
   </div>
