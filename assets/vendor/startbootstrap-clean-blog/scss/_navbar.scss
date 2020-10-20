@@ -5,6 +5,7 @@
   background-color: $mossgreen;
   @include sans-serif-font;
   .navbar-brand {
+    font-size: 0.9rem;
     font-weight: 800;
     color: $white;
     text-decoration: none;

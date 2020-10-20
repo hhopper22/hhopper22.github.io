@@ -1,5 +1,5 @@
 // Styling for the post page
-a.post-preview {
+a.project-preview {
   border: none;
   color: $gray-900;
   text-decoration: none;
@@ -13,35 +13,79 @@ a.post-preview {
       transition: 0.8s;
     }
     .card-img-overlay {
-    opacity: 1;
+      opacity: 1;
       transition: 0.8s;
+    }
   }
-  }
-  > .card-img-top {
+  .card-img-top {
     border-radius: 0;
   }
-  > .card-img-overlay {
+  .card-img-overlay {
     opacity: 0;
     display: flex;
     justify-content: center;
+    text-align: center;
     span i.fa-inverse {
       color: $floralwhite;
     }
   }
-  > .card-title {
-    font-size: .85rem;
-    margin-top: 2rem;
-    margin-bottom: .5rem;
+  .card-title {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
   }
-  > .card-text {
+  .card-text {
+    font-size: 1rem;
     font-weight: 300;
     margin: 0 0 .65rem;
   }
+}
+a.project-preview.full-portfolio {
+  &:focus,
+  &:hover {
+    background-color: $goldenrod;
+    .card-img-top {
+      opacity: 0;
+    }
+    .card-img-overlay {
+      opacity: 1;
+    }
+  }
+  .card-img-overlay {
+    align-content: center;
+    flex-direction: column;
+    .card-title {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      margin-bottom: 1rem;
+    }
+  .card-text {
+    font-weight: 400;
+  }  
+  }
+}
+.blog-posts {
+  background-color: $floralwhite;
+  padding: 2em;
+}
+.post-preview {
+  > a {
+    color: $gray-900;
+    text-decoration: none;
+    &:focus,
+    &:hover {
+      border-bottom: 1px solid;
+      color: $primary;
+    }
+    .post-subtitle {
+      font-weight: 300;
+      margin: 1em 0;
+    }
+  }
   > .post-meta {
-    font-size: 18px;
+    font-size: .8rem;
     font-style: italic;
     margin-top: 0;
-    color: $gray-600;
+    color: $gray-700;
     > a {
       text-decoration: none;
       color: $gray-900;
@@ -52,18 +96,4 @@ a.post-preview {
       }
     }
   }
-  @media only screen and (min-width: 768px) {
-    > a {
-      > .post-title {
-        font-size: 36px;
-      }
-    }
-  }
-  img {
-    max-width: 100%;
-  }
-}
-.blog-posts {
-  background-color: $floralwhite;
-  padding: 1em;
 }

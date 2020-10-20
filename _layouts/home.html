@@ -34,15 +34,15 @@ layout: default
 
     <div class="row">
       <div class="col-md-12">
-        <h2 class="section-heading mb-5">Recent Projects</h2>
+        <h2 class="section-heading mb-4">Recent Projects</h2>
       </div>
     </div>
 
     <div class="row row-cols-1 row-cols-md-2">
       <!-- Home Recent Portfolio List -->
-      {% for post in site.portfolio limit : 9 %}
+      {% for post in site.portfolio limit : 4 %}
       <div class="col mb-5">
-        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="card h-100 post-preview">
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="card h-100 project-preview">
           <img src="{{ post.front-image }}" class="card-img-top" alt="{{ post.front-image-alt }}" />
           <div class="card-img-overlay">
             <span class="fa-stack fa-2x">
@@ -72,19 +72,19 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="section-heading mb-5">Recent Posts</h2>
+        <h2 class="section-heading mb-4">Recent Posts</h2>
       </div>
       <!-- Home Post List -->
       {% for post in site.posts limit : 2 %}
 
-      <div class="col-md-6 mx-auto blog-posts">
+      <div class="col-md-6 mx-auto blog-posts mb-3">
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            <p class="post-subtitle">{{ post.subtitle }}</p>
             {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            <p class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
             {% endif %}
           </a>
           <p class="post-meta">Posted by
