@@ -40,7 +40,8 @@ layout: default
 
     <div class="row row-cols-1 row-cols-md-2">
       <!-- Home Recent Portfolio List -->
-      {% for post in site.portfolio limit : 4 %}
+      {% assign projects = site.portfolio | sort: 'project-date' | reverse %}
+      {% for post in projects limit : 4 %}
       <div class="col mb-5">
         <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="card h-100 project-preview">
           <img src="{{ post.front-image }}" class="card-img-top" alt="{{ post.front-image-alt }}" />

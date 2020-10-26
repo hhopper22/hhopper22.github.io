@@ -10,7 +10,7 @@ layout: default
           <div class="portfolio-item-heading">
             <h1>{{ page.title }}</h1>
             {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
+            <p class="subheading">{{ page.subtitle }}</p>
             {% endif %}
           </div>
         </div>
@@ -20,14 +20,14 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-2 col-md-3">
-        <p><i class="far fa-calendar-alt"></i>Completed in <strong>{{ page.project-date | date: '%B %Y' }}</strong></p>
-        <p><i class="fas fa-user-cog"></i>I did <strong>{{ page.work-type }}</strong> work in this project</p>
+      <div class="col-lg-3 col-md-3 project-details">
+        <p><i class="far fa-calendar-alt fa-fw"></i> Completed in {{ page.project-date | date: '%B %Y' }}</p>
+        <p><i class="fas fa-user-cog fa-fw"></i> I did {{ page.work-type }} work in this project</p>
         {% if page.site-type %}
-        <p><i class="fas fa-laptop-code"></i>This work was for a <strong>{{ page.site-type }}</strong></p>
+        <p><i class="fas fa-laptop-code fa-fw"></i> This work was for a {{ page.site-type }}</p>
         {% endif %}
       </div>
-      <div class="col-lg-8 col-md-9 mx-auto">
+      <div class="col-lg-9 col-md-9 mx-auto">
 
         {{ content }}
 
