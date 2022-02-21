@@ -3,6 +3,30 @@ footer {
   background-color: $mustard;
   margin-top: 60px;
   padding: 50px 0 65px;
+  .contact {
+    color:$white;
+    .btn {
+      font-size: 20px;
+      font-weight: 400;
+      padding: 12px 20px 15px;
+      letter-spacing: 0px;
+      border-radius: 0;
+      @include sans-serif-font;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background-color: $mustard;
+      border-color: $primary;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $primary;
+        color: $white;
+        background-color: darken($primary, 7.5) !important;
+        border-color: darken($primary, 7.5) !important;
+      }
+    }
+  }
   .list-inline {
     margin: 0;
     padding: 0;

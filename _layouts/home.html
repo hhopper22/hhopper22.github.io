@@ -41,7 +41,7 @@ layout: default
     <div class="row row-cols-1 row-cols-md-2">
       <!-- Home Recent Portfolio List -->
       {% assign projects = site.portfolio | sort: 'project-date' | reverse %}
-      {% for post in projects limit : 4 %}
+      {% for post in projects limit : 2 %}
       <div class="col mb-5">
         <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" class="card h-100 project-preview">
           <img src="{{ post.front-image }}" class="card-img-top" alt="{{ post.front-image-alt }}" />
@@ -70,12 +70,12 @@ layout: default
     </div>
   </div>
 
-  <!-- <div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h2 class="section-heading mb-4">Recent Posts</h2>
       </div>
-      <!-- Home Post List 
+      <!-- Home Post List -->
       {% for post in site.posts limit : 2 %}
 
       <div class="col-md-6 mx-auto blog-posts mb-3">
@@ -103,11 +103,11 @@ layout: default
       {% endfor %}
 
       <div class="col-md-12">
-        <!-- Pager
+        <!-- Pager -->
         <div class="clearfix">
           <a class="btn btn-primary" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
         </div>
       </div>
 
     </div>
-  </div> -->
+  </div>

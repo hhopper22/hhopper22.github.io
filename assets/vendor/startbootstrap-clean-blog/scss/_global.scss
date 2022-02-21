@@ -10,10 +10,22 @@ body {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 30px 0;
   a {
     text-decoration: underline;
+  }
+}
+
+.post li {
+  line-height: 1.6;
+  margin: 30px 0;
+  font-weight: 400;
+  @include serif-font;
+  font-size: 1.75rem;
+  p {
+    @include sans-serif-font;
+    font-size: 1rem;
   }
 }
 
@@ -55,6 +67,14 @@ blockquote {
   @include serif-font;
   font-weight: 400;
   margin-top: 60px;
+}
+
+.tldr {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: $gray-800;
+  background-color: $floralwhite;
+  padding: 2em;
 }
 
 .caption, .fine-print {
