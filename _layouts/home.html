@@ -88,7 +88,7 @@ layout: default
             <p class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
             {% endif %}
           </a>
-          <p class="post-meta">Posted by
+          <!--<p class="post-meta">Posted by
             {% if post.author %}
             {{ post.author }}
             {% else %}
@@ -96,7 +96,7 @@ layout: default
             {% endif %}
             on
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
+          </p> -->
         </article>
       </div>
 
