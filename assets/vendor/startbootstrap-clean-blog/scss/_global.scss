@@ -91,10 +91,10 @@ blockquote {
 .project-details {
   font-size: 0.83rem;
   font-weight: 400;
-  color: $gray-700;
-  padding-left: 7%;
+  color: $primary;
+  display: flex;
   p {
-    margin-left: 32px;
+    margin: 0px 34px;
     i {
       margin-left: -32px;
       margin-right: 5px;

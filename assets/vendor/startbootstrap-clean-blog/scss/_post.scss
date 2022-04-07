@@ -19,6 +19,9 @@ a.project-preview {
   }
   .card-img-top {
     border-radius: 0;
+    width: 100%;
+    max-height: 326px;
+    object-fit: cover;
   }
   .card-img-overlay {
     opacity: 0;
