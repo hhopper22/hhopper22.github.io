@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Recent Projects
+title: Projects
 background: '/img/bg-portfolio.jpg'
 ---
 
@@ -36,7 +36,8 @@ background: '/img/bg-portfolio.jpg'
           <img src="{{ post.front-image }}" class="card-img-top" alt="{{ post.front-image-alt }}" />
           <div class="card-img-overlay">
             <h2 class="card-title">{{ post.title }}</h2>
-            <p class="card-text">{{ post.project-date | date: '%B %Y' }}</p>
+            <p class="card-text">{{ post.work-type }}</p>
+            <!-- <p class="card-text">{{ post.project-date | date: '%B %Y' }}</p> -->
           </div>
         </a>
       </div>

@@ -93,12 +93,18 @@ blockquote {
   font-weight: 400;
   color: $primary;
   display: flex;
+  flex-direction: column;
   p {
     margin: 0px 34px;
     i {
       margin-left: -32px;
       margin-right: 5px;
     }
+  }
+}
+@media screen and (min-width:576px) {
+  .project-details {
+    flex-direction: row;
   }
 }
 
