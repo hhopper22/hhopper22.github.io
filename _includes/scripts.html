@@ -4,6 +4,36 @@
 
 <script src="{{"/assets/scripts.js" | relative_url }}"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script>
+  // Clipboard
+var clipboard = new ClipboardJS('#copy-button');
+
+clipboard.on('success', function(e) {
+     setTooltip('Copied!');
+     hideTooltip();
+});
+clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+});
+</script>
+
+<script>
+  // Tooltip
+function setTooltip(message) {
+  $('#copy-button').tooltip('hide')
+    .attr('data-original-title', message)
+    .tooltip('show');
+}
+function hideTooltip() {
+  setTimeout(function() {
+    setTooltip('Copy to clipboard');
+    $('#copy-button').tooltip('hide');
+  }, 2000);
+}
+</script>
+
 {% if page.url contains 'contact' %}
   <!-- Form Validation -->
   <script src="{{"/assets/vendor/startbootstrap-clean-blog/js/jqBootstrapValidation.js" | relative_url }}"></script>
