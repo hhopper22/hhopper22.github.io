@@ -3,13 +3,27 @@
 <footer id="footer">
   <div class="container">
     <div class="row">
+      <div class="col-lg-3 col-md-6 mx-auto text-center">
+        <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
+      </div>
+      <div class="col-lg-3 col-md-6 mx-auto text-center">
+        <a class="nav-link" href="{{ "/projects" | relative_url }}">Featured Projects</a>
+      </div>
+      <div class="col-lg-3 col-md-6 mx-auto text-center">
+        <a class="nav-link" href="{{ "/posts" | relative_url }}">Blog</a>
+      </div>
+      <div class="col-lg-3 col-md-6 mx-auto text-center">
+        <a class="nav-link" href="{{"/contact" | relative_url }}">Contact Me</a>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto text-center">
         <p class="contact">Want to get in touch? Send me a message at 
           <button id="copy-button" type="button" class="btn btn-primary" data-clipboard-text="{{ site.email | encode_email }}" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
             haleyhopper22@gmail.com
           </button>
         </p>
-        <hr>
       </div>
     </div>
     <div class="row">
@@ -76,7 +90,7 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+        <p class="copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.author }}</p>
       </div>
     </div>
   </div>
