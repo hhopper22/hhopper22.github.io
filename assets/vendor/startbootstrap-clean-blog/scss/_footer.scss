@@ -3,6 +3,19 @@ footer {
   background-color: $mustard;
   margin-top: 60px;
   padding: 50px 0 65px;
+  nav {
+    a {
+      @include serif-font;
+      font-size: 18px;
+      color: $white;
+      font-weight: 700;
+      text-decoration: none;
+      &:hover, &:focus, &:active {
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
   .contact {
     color:$white;
     .btn {
@@ -14,17 +27,19 @@ footer {
       @include sans-serif-font;
       text-decoration: none;
     }
-    .btn-primary {
-      background-color: $mustard;
-      border-color: $primary;
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $primary;
-        color: $white;
-        background-color: darken($primary, 7.5) !important;
-        border-color: darken($primary, 7.5) !important;
-      }
+  }
+  .btn-primary {
+    background-color: $mustard;
+    border-color: $white;
+    color: $white;
+    font-size: 18px;
+    @include serif-font;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: darken($primary, 7.5) !important;
+      border-color: darken($primary, 7.5) !important;
     }
   }
   .list-inline {
