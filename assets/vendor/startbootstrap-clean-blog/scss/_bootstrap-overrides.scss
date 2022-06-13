@@ -1,9 +1,9 @@
 // Bootstrap overrides for this template
 .btn {
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 15px;
+  font-weight: 700;
   padding: 15px 25px;
-  letter-spacing: 1px;
+  letter-spacing: 0.25px;
   border-radius: 0;
   @include sans-serif-font;
   text-decoration: none;
@@ -18,6 +18,19 @@
     color: $white;
     background-color: darken($primary, 7.5) !important;
     border-color: darken($primary, 7.5) !important;
+  }
+}
+
+.btn-secondary {
+  color: $white;
+  background-color: $primary;
+  border-color: $white;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary;
+    background-color: lighten($white, 7.5) !important;
+    border-color: lighten($white, 7.5) !important;
   }
 }
 
