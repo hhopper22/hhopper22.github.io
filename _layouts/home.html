@@ -13,25 +13,20 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
+            <h1>Have a brand the competition is jealous of</h1>
+            
+            <h2 class="subheading">Tell your unique story and attract the right customers with your branding</h2>
+            
+            <a class="btn btn-secondary" href="{{"/inquire" | relative_url }}">Inquire</a>
           </div>
         </div>
       </div>
     </div>
-  </header>
+</header>
 
+    {{ content }}
+    
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        {{ content }}
-
-      </div>
-    </div>
-
     <div class="row">
       <div class="col-md-12">
         <h2 class="section-heading mb-4">Recent Projects</h2>
@@ -70,12 +65,12 @@ layout: default
     </div>
   </div>
 
-  <div class="container">
+  <!--<div class="container">
     <div class="row">
       <div class="col-md-12">
         <h2 class="section-heading mb-4">Recent Posts</h2>
       </div>
-      <!-- Home Post List -->
+      Home Post List
       {% for post in site.posts limit : 2 %}
 
       <div class="col-md-6 mx-auto blog-posts mb-3">
@@ -88,7 +83,7 @@ layout: default
             <p class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
             {% endif %}
           </a>
-          <!--<p class="post-meta">Posted by
+          <p class="post-meta">Posted by
             {% if post.author %}
             {{ post.author }}
             {% else %}
@@ -96,18 +91,18 @@ layout: default
             {% endif %}
             on
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p> -->
+          </p> 
         </article>
       </div>
 
       {% endfor %}
 
       <div class="col-md-12">
-        <!-- Pager -->
+        Pager
         <div class="clearfix">
           <a class="btn btn-primary" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
         </div>
       </div>
 
     </div>
-  </div>
+  </div> -->
