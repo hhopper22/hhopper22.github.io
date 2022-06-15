@@ -131,3 +131,16 @@ img::-moz-selection {
   color: $white;
   background: transparent;
 }
+
+ul.failure-list {
+  list-style:none;
+  li {
+    margin-bottom: .5em;
+    &:before {
+      content: '\2716';
+      margin-left: -2em;
+      margin-right: 1em;
+      color: $brickred;
+    }
+  }
+}
