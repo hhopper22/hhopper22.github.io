@@ -69,6 +69,20 @@ blockquote {
   margin-top: 60px;
 }
 
+.sans-heading {
+  @include sans-serif-font;
+}
+
+.small-heading {
+  font-size: 1.5rem;
+}
+
+.serif-highlight {
+  font-size: 2rem;
+  @include serif-font;
+  font-weight: 400;
+}
+
 .tldr {
   font-size: 0.9rem;
   font-style: italic;
