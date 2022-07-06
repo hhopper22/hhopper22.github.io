@@ -158,3 +158,15 @@ ul.failure-list {
     }
   }
 }
+ul.success-list {
+  list-style:none;
+  li {
+    margin-bottom: .5em;
+    &:before {
+      content: '\2713';
+      margin-left: -2em;
+      margin-right: 1em;
+      color: $mossgreen;
+    }
+  }
+}
