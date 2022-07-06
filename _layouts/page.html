@@ -21,21 +21,16 @@ layout: default
         </div>
       </div>
     </div>
-  </header>
+</header>
 
+  {{ content }}
+
+<div class="row">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        {{ content }}
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 mx-auto updated-date">
+    <div class="col-md-4 mx-auto updated-date">
       {% if page.last-updated %}
         <span class="fine-print">Last updated on {{ page.last-updated }}</span>
       {% endif %}
-      </div>
     </div>
   </div>
+</div>
