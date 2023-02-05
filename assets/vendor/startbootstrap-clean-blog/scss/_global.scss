@@ -34,13 +34,19 @@ h2 {
   font-weight: 400;
   @include serif-font;
 }
-h3,
+h3 {
+  font-size: 1.55rem;
+  letter-spacing: -0.3px;
+  font-weight: 600;
+  @include sans-serif-font;
+}
 h4,
 h5,
 h6 {
-  font-weight: 800;
+  font-weight: 700;
   @include sans-serif-font;
 }
+
 
 a {
   color: $primary;
@@ -102,26 +108,6 @@ blockquote {
   border-bottom-left-radius: 5px;
 }
 
-.project-details {
-  font-size: 0.83rem;
-  font-weight: 400;
-  color: $primary;
-  display: flex;
-  flex-direction: column;
-  p {
-    margin: 0px 34px;
-    i {
-      margin-left: -32px;
-      margin-right: 5px;
-    }
-  }
-}
-@media screen and (min-width:576px) {
-  .project-details {
-    flex-direction: row;
-  }
-}
-
 ::-moz-selection {
   color: $white;
   background: $brickred;
@@ -167,6 +153,44 @@ ul.success-list {
       margin-left: -2em;
       margin-right: 1em;
       color: $mossgreen;
+    }
+  }
+}
+
+/* -------- Project Detail Pages -------- */
+.project-details {
+  font-size: 0.83rem;
+  font-weight: 400;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 0px 34px;
+    i {
+      margin-left: -32px;
+      margin-right: 5px;
+    }
+  }
+}
+@media screen and (min-width:576px) {
+  .project-details {
+    flex-direction: row;
+  }
+}
+
+ul.project-goals {
+  font-size: 0.83rem;
+  display: flex;
+  flex-direction: column;
+  list-style:none;
+  gap: 20px 30px;
+}
+@media screen and (min-width:576px) {
+  ul.project-goals {
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+      flex-basis: calc(100% / 3 - 30px);
     }
   }
 }
