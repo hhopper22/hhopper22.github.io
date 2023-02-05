@@ -45,6 +45,9 @@
 .bg-secondary {
   background-color: $secondary !important;
 }
+.bg-tertiary {
+  background-color: lighten($primary, 60%)
+}
 .bg-red {
   background-color: $brickred !important;
 }
