@@ -13,10 +13,10 @@ layout: default
             <p class="subheading">{{ page.subtitle }}</p>
             {% endif %}
             <div class="project-details">
-              <p><i class="far fa-calendar-alt fa-fw"></i> Completed in {{ page.project-date | date: '%B %Y' }}</p>
-              <p><i class="fas fa-user-cog fa-fw"></i> I did {{ page.work-type | downcase }} work in this project</p>
+              <p><i class="fa-solid fa-calendar-days fa-fw"></i> Completed in {{ page.project-date | date: '%B %Y' }}</p>
+              <p><i class="fa-solid fa-user-cog fa-fw"></i> I did {{ page.work-type | downcase }} work in this project</p>
               {% if page.site-type %}
-              <p><i class="fas fa-laptop-code fa-fw"></i> This project was for a {{ page.site-type }}</p>
+              <p><i class="fa-solid fa-laptop-code fa-fw"></i> This project was for a {{ page.site-type }}</p>
               {% endif %}
             </div>
           </div>
